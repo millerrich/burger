@@ -10,4 +10,10 @@ router.get("/", function(req, res) {
     });
 });
 
+router.post("/api/burgers", function(req, res) {
+    burger.insertOne(["name"], [req.body], function(result) {
+        res.json({ burger_name: result })
+    });
+});
+
 module.exports = router;

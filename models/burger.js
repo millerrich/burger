@@ -5,6 +5,11 @@ var burger = {
         orm.all("burgers", function(res) {
             cb(res);
         });
+    },
+    insertOne: function(val, cb) {
+        orm.insertOne("burgers", val, function(res) {
+            cb(res);
+        });
     }
 };
 

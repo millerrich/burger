@@ -6,8 +6,13 @@ var orm = {
             if (err) throw err;
             cb(result);
         });
+    },
+    insertOne: function(table, val, cb) {
+        connection.query("INSERT INTO ?? VALUES ?",[table, val], function(err, result) {
+            if (err) throw err;
+            cb(result);
+        });
     }
-//     insertOne: function()
 //     updateOne: function()
 };
 
