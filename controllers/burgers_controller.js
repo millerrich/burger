@@ -16,4 +16,10 @@ router.post("/api/burgers", function(req, res) {
     });
 });
 
+router.post("/api/burgers/:id", function(req, res) {
+    burger.updateOne(req.params.id, function() {
+        res.redirect("/");
+    });
+});
+
 module.exports = router;
