@@ -1,12 +1,13 @@
 <!--all burgs-->
 <div class="burgInfo">
-    <div>
+    <div class="burgerDiv">
         <h2>NOT DEVOURED</h2>
         {{#each burgers}}
         {{#unless devoured}}
         <form action="api/burgers/{{id}}" method="POST">
-            <ul>
-                <li class="burgAll">{{id}}: {{burger_name}}
+            <ul class="burgAll">
+                <li class="burgList">
+                    <div class="nameDiv">{{id}}: {{burger_name}}</div>
                     <button class="devour" type="submit">DEVOUR</button>
                 </li>
             </ul>
@@ -15,7 +16,7 @@
         {{/each}}
     </div>
     <!--devoured-->
-    <div>
+    <div class="devouredDiv">
         <h2>DEVOURED</h2>
         {{#each burgers}}
         {{#if this.devoured}}
@@ -31,7 +32,7 @@
 
     <div>
 
-        <label for="/api/burgers" class="submitLabel">TYPE BURG NAME IN BOX</label>
+        <label for="/api/burgers" class="submitLabel"><p>TYPE BURG NAME IN BOX</p></label>
     </div>
     <div>
         <textarea class="textArea" type="text" id="api/burgers" name="burger_name"></textarea>

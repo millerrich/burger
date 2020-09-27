@@ -8,10 +8,11 @@ body {
     justify-content: space-evenly;
     border: black solid 2px;
     border-radius: 10px;
-    background: repeating-linear-gradient(
-        90deg,
-        blue 0px 20px,
-        purple 20px 40px
+    background: linear-gradient(
+        185deg,
+        pink,
+        purple,
+        lightblue
     );
 }
 
@@ -21,20 +22,72 @@ body {
     border-radius: 10px;
 }
 
+.burgList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
 .devour {
     border-radius: 10px;
     background-color: plum;
 }
 
+.nameDiv {
+    margin-right: 5px;
+}
+
+
 .devoured {
     background-color: powderblue;
+    border: black solid 1px;
+    border-radius: 10px;
 }
 
 .submitBurg {
-    background-color: pink;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: lightblue;
     margin-left: 33%;
     margin-right: 33%;
+    border: black solid 2px;
+    border-radius: 10px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.burgerDiv, .devouredDiv {
+    border-radius: 100%;
+    background: repeating-radial-gradient(
+        circle,
+        transparent,
+        transparent,
+        pink,
+        transparent,
+        lightblue
+    );
+}
+
+.textArea {
+    width: 100%;
+    background: radial-gradient(
+        circle,
+        transparent,
+        pink
+    );
+}
+
+.submitBtn {
+    background-color: pink;
+    border: black solid 2px;
+    border-radius: 10px;
+}
+
+.submitLabel {
+    text-align: center;
 }
