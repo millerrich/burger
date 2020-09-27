@@ -22,7 +22,7 @@ clone from github and run locally or visit heroku address: https://young-fortres
 Type a burger name in the box and click the button to add a burger to the list. To devour the burger, click the devour button and it will be added to the devoured list.
 
 ## License
-
+none
 
 ## Contributors
 n/a
