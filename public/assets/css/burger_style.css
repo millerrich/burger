@@ -1,3 +1,40 @@
 body {
     background-color: red;
 }
+
+.burgInfo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    border: black solid 2px;
+    border-radius: 10px;
+    background: repeating-linear-gradient(
+        90deg,
+        blue 0px 20px,
+        purple 20px 40px
+    );
+}
+
+.burgAll {
+    background-color: pink;
+    border: black solid 1px;
+    border-radius: 10px;
+}
+
+.devour {
+    border-radius: 10px;
+    background-color: plum;
+}
+
+.devoured {
+    background-color: powderblue;
+}
+
+.submitBurg {
+    background-color: pink;
+    margin-left: 33%;
+    margin-right: 33%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}

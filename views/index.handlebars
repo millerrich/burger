@@ -1,10 +1,43 @@
-<ul>
-{{#each burgers}}
-<li>
-    <p>
-        {{this.burger_name}}
-        <button data-id="{{this.id}}" class="devour">DEVOUR</button>
-    </p>
-</li>
-{{/each}}
-</ul>
+<!--all burgs-->
+<div class="burgInfo">
+    <div>
+        <h2>NOT DEVOURED</h2>
+        {{#each burgers}}
+        {{#unless devoured}}
+        <form action="api/burgers/{{id}}" method="POST">
+            <ul>
+                <li class="burgAll">{{id}}: {{burger_name}}
+                    <button class="devour" type="submit">DEVOUR</button>
+                </li>
+            </ul>
+        </form>
+        {{/unless}}
+        {{/each}}
+    </div>
+    <!--devoured-->
+    <div>
+        <h2>DEVOURED</h2>
+        {{#each burgers}}
+        {{#if this.devoured}}
+        <ul class="devoured">
+            <li class="devour-name">{{this.id}}: {{this.burger_name}}</li>
+        </ul>
+        {{/if}}
+        {{/each}}
+    </div>
+</div>
+<!--add burg-->
+<form class="submitBurg" action="/api/burgers" method="POST">
+
+    <div>
+
+        <label for="/api/burgers" class="submitLabel">TYPE BURG NAME IN BOX</label>
+    </div>
+    <div>
+        <textarea class="textArea" type="text" id="api/burgers" name="burger_name"></textarea>
+
+    </div>
+    <div>
+        <button type="submit" class="submitBtn">ADD BURG TO LIST</button>
+    </div>
+</form>
